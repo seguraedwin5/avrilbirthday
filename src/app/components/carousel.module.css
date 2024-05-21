@@ -1,0 +1,59 @@
+.embla{
+    max-width: 48rem;
+  margin: 30px auto;
+}
+
+.embla_viewport{
+    overflow: hidden;
+}
+
+.embla_container{
+    display: flex;
+    margin-bottom: 15px;
+    
+}
+
+.embla_slide{
+    flex: 0 0 100%;
+    width: 100vw;
+    height: 80vh;
+    min-width: 50px;
+    border-radius: 15px;
+    
+}
+
+.embla_prev{
+    width: 80px;
+    height: 30px;
+    background-color: #ee5e88;
+    color: white;
+    
+}
+
+.embla_next{
+    width: 80px;
+    height: 30px;
+    background-color: #ee5e88;
+    color: white;
+    
+}
+
+.btn{
+    border: none;
+    box-shadow: 5px 5px 15px black;
+    border-radius: 5px;
+}
+
+.btn_group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.imagen {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 15px;
+  
+}

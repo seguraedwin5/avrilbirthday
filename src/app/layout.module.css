@@ -1,0 +1,27 @@
+
+
+.appBar {
+    background: #FC86AA ;
+    color: #00022E;
+    position: relative;
+  }
+
+
+  .drawer {
+    background: #D8DCD6;
+    width: 240px;
+    position: static;
+  };
+
+  .main {
+    flex: 1;
+    background: #F6AFD8;
+    color: black;
+    
+  };
+
+  .footer {
+    background: #00022E;
+    height: 50px;
+    color: #F6AFD8;
+  };
