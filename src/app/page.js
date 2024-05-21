@@ -1,95 +1,74 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
+"use client";
+import styles from "./page.module.css";
+import { Container, Box, Grid } from "@mui/material";
+import Logowa from "./assets/whatsapp.svg";
+import { useState } from "react";
+import Carousel from "./components/Carousel";
+import Image from "next/image";
+import Card from "./components/Card";
+import Formulario from "./components/Formulario";
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
+    <Container
+      sx={{
+        marginTop: "10px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "10px",
+      }}
+    >
+      <Box
+        display="flex"
+        flexDirection="column"
+        justifyContent={"flex-start"}
+        alignItems={"center"}
+        height={"100vh"}
+        width={"100%"}
+        gap={4}
+      >
+        <h1>Mi Primer Añito</h1>
+        <p
+          style={{ color: "black", alignSelf: "center", justifySelf: "center" }}
+        >
+          Hola mis papitos y yo queremos invitarte a la celebración de mi
+          cumpleaños
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <Box className={styles.section_container}>
+          <h1 style={{ textAlign: "center" }}>Invitacion</h1>
+          <video
+            src="/videos/video_invitacion.mp4"
+            width={350}
+            height={600}
+            controls={true}
+          ></video>
+        </Box>
+        <Box>
+          <div
+            style={{
+              backgroundImage: "url('/images/invitacion.png')",
+              backgroundRepeat: "no-repeat",
+              backgroundPosition: "center center",
+              backgroundSize: "100% 100%",
+              height: "100vh",
+              width: "100vw",
+              backgroundAttachment: "scroll",
+            }}
+          ></div>
+        </Box>
+        <Box>{/*<Formulario></Formulario>*/}</Box>
+        <Box>
+          <div className={styles.button}>
+            <Image src={Logowa} width={30} height={30} alt="logowa"></Image>
+            <a
+              href="https://wa.me/573202093373?text=Hola%20quiero%20confirmar%20mi%20asistencia%20al%20cumplea%C3%B1os"
+              style={{ textDecoration: "none", fontWeight: "bold" }}
+            >
+              Confirmar por Whatsapp
+            </a>
+          </div>
+        </Box>
+      </Box>
+    </Container>
+  );
 }
