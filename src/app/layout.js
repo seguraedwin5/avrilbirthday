@@ -38,7 +38,21 @@ export default function RootLayout({ children }) {
           <CacheProvider value={cache}>
             <div>
               <AppBar className={styles.appBar}>
-                <Toolbar></Toolbar>
+                <Toolbar
+                  sx={{
+                    textAlign: "center",
+                    color: "whitesmoke",
+                    textShadow: "5px 5px 12px blue",
+                  }}
+                >
+                  <Typography
+                    variant="h4"
+                    component={"div"}
+                    sx={{ flexGrow: 1 }}
+                  >
+                    Feliz Cumpleaños Avril
+                  </Typography>
+                </Toolbar>
               </AppBar>
 
               <div className={styles.container}>
